@@ -1,0 +1,122 @@
+:root {
+  --bg: #f5f6fa;
+  --text: #2f3640;
+  --card-bg: #fff;
+  --link: #0984e3;
+  --button: #0097e6;
+  --button-hover: #0077c2;
+}
+
+body.dark {
+  --bg: #2f3640;
+  --text: #f5f6fa;
+  --card-bg: #353b48;
+  --link: #74b9ff;
+  --button: #40739e;
+  --button-hover: #273c75;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.news-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.news-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.news-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.news-card a {
+  color: var(--link);
+  margin-top: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-card button {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background-color: var(--button);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.news-card button:hover {
+  background-color: var(--button-hover);
+}
+
+.news-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover; /* Ensures aspect ratio is maintained */
+}
+
+
+.summary {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.92rem;
+  border-left: 3px solid #dcdde1;
+  padding-left: 10px;
+}
